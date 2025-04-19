@@ -1,0 +1,154 @@
+
+body {
+  background-color: #121212;
+  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: #1e1e1e;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #f0a500;
+}
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+.nav-item {
+  text-decoration: none;
+  color: #fff;
+  position: relative;
+  padding-bottom: 5px;
+}
+.nav-item::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #f0a500;
+  transition: width 0.3s ease;
+}
+.nav-item:hover::after,
+.nav-item.active::after {
+  width: 100%;
+}
+.hero {
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 80px;
+  height: 100vh;
+  background: url('hero-bg.jpg') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 2rem;
+  text-align: center;
+  border-radius: 10px;
+}
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+.hero p {
+  font-size: 1.5rem;
+  color: #f0a500;
+}
+.cta-button {
+  margin-top: 1.5rem;
+  display: inline-block;
+  background-color: #f0a500;
+  padding: 0.8rem 1.5rem;
+  color: #000;
+  border-radius: 25px;
+  text-decoration: none;
+}
+.portfolio, .about, .contact {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+.gallery {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+.gallery img {
+  width: 250px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.gallery img:hover {
+  transform: scale(1.05);
+}
+footer {
+  background-color: #1e1e1e;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 3rem;
+}
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  justify-content: center;
+  align-items: center;
+}
+.lightbox-content {
+  max-width: 90%;
+  max-height: 90%;
+}
+.lightbox .close {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  font-size: 40px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.logo {
+  height: 40px;
+  margin-right: 20px;
+}
+
+.logo {
+  height: 60px;
+  margin-right: 20px;
+}
+
+/* Zoom effect on image click */
+.portfolio img {
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.portfolio img:active {
+  transform: scale(1.1);
+}
